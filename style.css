@@ -1,0 +1,200 @@
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(to right, #4facfe, #00f2fe);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+        transition: 0.4s;
+      }
+
+      body.dark {
+        background: linear-gradient(to right, #141e30, #243b55);
+      }
+
+      .weather-app {
+        background: #ffffff;
+        padding: 25px;
+        border-radius: 12px;
+        width: 90vw;
+        max-width: 700px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        transition: 0.4s;
+      }
+
+      body.dark .weather-app {
+        background: #1f1f1f;
+        color: #f1f1f1;
+      }
+
+      .theme-toggle {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 10px;
+      }
+
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 46px;
+        height: 24px;
+      }
+
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: 0.4s;
+        border-radius: 24px;
+      }
+
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 18px;
+        width: 18px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 50%;
+      }
+
+      input:checked + .slider {
+        background-color: #4facfe;
+      }
+
+      input:checked + .slider:before {
+        transform: translateX(22px);
+      }
+
+      .weather-app h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #333;
+        transition: 0.4s;
+      }
+
+      body.dark .weather-app h1 {
+        color: #f1f1f1;
+      }
+
+      input[type="text"] {
+        width: 40vw;
+        max-width: 300px;
+        padding: 12px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 16px;
+        transition: 0.4s;
+      }
+
+      body.dark input[type="text"] {
+        background: #333;
+        color: #fff;
+        border: 1px solid #555;
+      }
+
+      button {
+        width: 40vw;
+        max-width: 300px;
+        padding: 12px;
+        background-color: #4facfe;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        background-color: #00c6fb;
+      }
+
+      body.dark button {
+        background: #1568b0;
+        color: #fff;
+        border: 1px solid #555;
+      }
+
+      body.dark button:hover {
+        background: #00c6fb;
+      }
+
+      .result {
+        margin-top: 20px;
+        font-size: 16px;
+        color: #444;
+        transition: 0.4s;
+      }
+
+      body.dark .result {
+        color: #e5e5e5;
+      }
+
+      .result img {
+        width: 60px;
+        height: 60px;
+      }
+
+      .forecast {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        width: 100%;
+        margin-top: 25px;
+        gap: 12px;
+        overflow: hidden;
+      }
+
+      .forecast-day {
+        flex: 1;
+        min-width: 0;
+        background: #f9f9f9;
+        padding: 12px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: 0.4s;
+      }
+
+      body.dark .forecast-day {
+        background: #2b2b2b;
+        color: #ddd;
+      }
+
+      .forecast-day img {
+        width: 50px;
+        height: 50px;
+      }
+
+      .forecast-day p {
+        margin: 6px 0;
+        font-size: 14px;
+        color: #555;
+        transition: 0.4s;
+      }
+
+      body.dark .forecast-day p {
+        color: #ddd;
+      }
